@@ -951,6 +951,7 @@ export function useProjectsState({
     (project: Project) => {
       setSelectedProject(project);
       setSelectedSession(null);
+      setNewSessionTrigger((previous) => previous + 1);
       navigate('/');
 
       if (isMobile) {
